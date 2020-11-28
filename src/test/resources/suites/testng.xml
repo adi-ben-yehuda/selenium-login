@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test" parallel="classes">
+
+		<parameter name="oneNumber" value="1"/>
+		<parameter name="justStrudel" value="a@"/>
+		<parameter name="strudelWithoutDot" value="a@mail"/>
+		<parameter name="strudelAndDotWithoutText" value="a@."/>
+		<parameter name="strudelAndDotWithOneLetter" value="a@mail.c"/>
+
+		<parameter name="tenDigits" value="05214758423"/>
+		<parameter name="notValidBeginningPhone" value="000514758"/>
+		<parameter name="notValidBeginningTelephone" value="100147584"/>
+
+		<parameter name="validEmail" value="a@mail.com"/>
+		<parameter name="validTelephone" value="0523641578"/>
+		<parameter name="validPhone" value="039516258"/>
+		<parameter name="validName" value="Adi"/>
+		<parameter name="validCompany" value="Ben"/>
+
+		<classes>
+			<class name="example.example.tests.BaseTest"/>
+			<class name="example.example.tests.ContactUsTest"/>
+		</classes>
+	</test>
+</suite>
